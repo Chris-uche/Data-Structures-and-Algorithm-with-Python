@@ -135,6 +135,25 @@ def binarySearchHelper(array, target,left, right):
         else:
             left = middle + 1
     return -1
-            
 
+
+def searchcaseEight(array,target):
+    return binarySearchHelper(array, target, 0, len(array)-1)
+
+def binarySearchHelper(array, target, left, right):
+    if left > right:
+        return -1
+    #using the recursive method
+    middle = (left + right)//2
+    potentialMiddleValue = array[middle]
+
+    if target < potentialMiddleValue:
+        return binarySearchHelper(array, target, left, middle - 1)
+    elif target==potentialMiddleValue:
+        return middle
+    else:
+        return binarySearchHelper(array, target, middle+1, right)
+    
+        
+        
 
