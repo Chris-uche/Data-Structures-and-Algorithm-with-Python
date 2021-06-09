@@ -27,3 +27,16 @@ def twoNumSum(array, targetSum):
             
             
 
+
+def twoNumberSum(array, targetSum):
+    nums = {}
+
+    for num in array:
+        potentialNum = targetSum - num
+        if potentialNum in nums:
+            return [potentialNum, num]
+        else:
+            nums[num] = True
+    return []
+
+
