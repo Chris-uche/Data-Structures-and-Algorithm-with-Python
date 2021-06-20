@@ -41,3 +41,48 @@ def threeNumSum(array, targetSum):
     return theTriplet
                 
                 
+def ThreenumberSum(array, target):
+    array.sort()
+    triplets = []
+
+    for l in range(len(array)-2):
+        left = l + 1
+        right= len(array)-1
+        while left < right:
+            currentSum = array[l] + array[left] + array[right]
+            if currentSum == target:
+                triplets.append([array[l],array[left],array[right]])
+                left +=1
+                right -=1
+            elif currentSum < target:
+                left +=1
+            elif currentSum > target:
+                right -=1
+    return triplets
+
+
+
+def ThreeNumberSum(array, targetSum):
+    tripleArray=[]
+    array.sort()
+
+    for i in range(len(array)-2):
+        left = 1 +1
+        right = len(array)-1
+        while left < right:
+            currentSum = array[1] + array[left] + array[right]
+            if currentSum == targetSum:
+                tripleArray.append([array[i],array[left], array[right]])
+                left += 1
+                right -= 1
+            elif currentSum < targetSum:
+                left +=1
+            elif current > targetSum:
+                right -=1
+
+        return tripleArray
+                                
+
+
+                
+                
