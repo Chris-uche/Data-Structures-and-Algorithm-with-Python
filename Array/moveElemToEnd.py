@@ -13,6 +13,21 @@ def moveElemsToEnd(array, toMoveNum):
             i +=1
 
     return array
+
+
+def getElementToTheEnd(array, toMoveNum):
+    #define the pointers
+    i = 0
+    j = len(array)-1
+
+    while i < j:
+        while i < j and array[j] == toMoveNum:
+            j -= 1
+        if array[i] == toMoveNum:
+            array[i], array[j] = array[j], array[i]
+            #After we have swapped the values here we increment
+            i += 1
+    return array
         
 
 

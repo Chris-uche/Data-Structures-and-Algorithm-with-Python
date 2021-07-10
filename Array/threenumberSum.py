@@ -15,7 +15,7 @@ def threenumberSum(array, targetSum):
                 right -=1
             elif currentSum < targetSum:
                 left +=1
-            elif currentSum > targerSum:
+            elif currentSum > targetSum:
                 right -=1
 
     return triplet
@@ -77,7 +77,7 @@ def ThreeNumberSum(array, targetSum):
                 right -= 1
             elif currentSum < targetSum:
                 left +=1
-            elif current > targetSum:
+            elif currentSum > targetSum:
                 right -=1
 
         return tripleArray
