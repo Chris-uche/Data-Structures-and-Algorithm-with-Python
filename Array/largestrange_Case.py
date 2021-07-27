@@ -1,12 +1,13 @@
-def longestRange(array):
-    bestRange = []
-    longestRange = 0
-    nums ={}
-    #We traverse every number in the array,
-    for num in array:
-        #We set every number in the hash table to be True  by default
-        nums[num] = True
-    for num in array:
-        if not nums[num]:
-            continue
-        nums[num] = False
+import unittest
+import largestRange
+
+class TestProgram(unittest.TestCase):
+   def test_case_1(self):
+        self.assertEqual(largestRange.longestRange([4, 2, 1, 3]), [1, 4])
+
+    
+
+    
+
+if __name__ == '__main__':
+    unittest.main()
